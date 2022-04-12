@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es_mx">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="images/favicon.png">
+	<title>Prospecta - Universidad Azteca de Guadalajara</title>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+	<link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+	
+	<!-- navbar -->
+	<div class="navbar">
+		<div class="container">
+			<div class="row">
+				<div class="col s3">
+					<div class="content-left">
+						<a href="#slide-out" data-activates="slide-out" class="sidebar"></a>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="content-center">
+						<a href="index.html"><h1>Universidad Azteca de Guadalajara</h1></a>
+					</div>
+				</div>
+				<div class="col s3">
+					<div class="content-right">
+						<a href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end navbar -->
+	<br><br><br>
+	<!-- sign in -->
+	<div class="sign-in segments-page">
+		<div class="container">
+		<div class="signin-contents z-depth-1">
+			<div class="pages-title">
+				<h3>Ingreso</h3>
+				<div class="line"></div>
+			</div>
+			<form>
+				<div class="input-field">
+					<input type="email">
+					<label>Email</label>
+				</div>
+				<div class="input-field">
+					<input type="password">
+					<label>Contraseña</label>
+				</div>
+				<button class="button z-depth-1"><i class="fa fa-sign-in"></i>Entrar</button>
+			</form>
+		</div>
+		</div>
+	</div>
+	<!-- end sign in -->
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/materialize.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

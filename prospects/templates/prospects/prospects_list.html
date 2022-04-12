@@ -1,9 +1,59 @@
-<html>
-    <head>
-        <title>Ola's blog</title>
-    </head>
-    <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
-    </body>
+{% extends 'prospects/base.html' %}
+{% load static %}
+
+
+	{% block head %}
+	{% endblock %}
+
+	{% block content %}
+	<!-- list -->
+	<div class="list segments-page">
+		<div class="container">
+				<div class="pages-title">
+					<h3>MIS PROSPECTOS</h3>
+				</div>
+			<div class="contents z-depth-1">
+				<div class="list-text">
+					<h6>Juan Sanchés Perez</h6>
+					<p><i class="fa fa-phone"></i> <a href="tel:+3311221122">331299 211</a></p>
+					<p><i class="fa fa-envelope"></i> <a href="mailto:juan.sanchez@gmail.com">juan.sanchez@gmail.com</a></p>
+					<ul>
+						<li><b>Licenciatura en Enfermería</b></li>
+						<li>Plantel Juárez</li>
+						<li>4-Mayo-2022</li>
+						<li>9:00 a.m.</li>
+						<li>Inscripción: <b>$600</b></li>
+						<li>Colegiatura Mensual <b>$200</b></li>
+						<li>Convenio <b>Coca Cola</b></li>
+					</ul>
+				</div>
+			</div>
+			<div class="contents z-depth-1">
+				<div class="list-text">
+					<h6>Guillermo Manzano</h6>
+					<p><i class="fa fa-phone"></i> <a href="tel:+3311221122">331299 211</a></p>
+					<p><i class="fa fa-envelope"></i> <a href="mailto:juan.sanchez@gmail.com">guillermo.manzano@gmail.com</a></p>
+					<ul>
+						<li><b>Licenciatura en Psicología</b></li>
+						<li>Plantel Juárez</li>
+						<li>4-Mayo-2022</li>
+						<li>9:00 a.m.</li>
+						<li>Inscripción: <b>$600</b></li>
+						<li>Colegiatura Mensual <b>$200</b></li>
+						<li>Convenio <b>Coca Cola</b></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end list -->
+	{% endblock %}
+
+
+	<!-- end footer -->
+
+	{% block scripts %}
+	{% endblock %}
+
+</body>
 </html>

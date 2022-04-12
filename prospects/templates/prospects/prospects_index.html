@@ -1,0 +1,130 @@
+{% extends 'prospects/base.html' %}
+{% load static %}
+
+	{% block slide %}
+
+	<!-- slide -->
+	<div class="slide">
+		<div class="slide-show owl-carousel owl-theme">
+			<div class="slide-content">
+				<div class="mask"></div>
+				<img src="{% static 'images/BANNER-1.jpg' %}" alt="">
+				<div class="caption text-center">
+					<p style="text-align:center;"><b>BIENVENIDO AL PROCESO DE INSCRIPCIÓN</b></p>
+					<br><br>
+					<p style="text-align:center;"><b>DEPARTAMENTO DE PROMOCIÓN</b></p>
+					<p style="text-align:center;">JUAN CARLOS GONZÁLES MARTÍNEZ</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end slide -->
+	{% endblock %}
+
+	{% block content %}
+	<!-- features -->
+	<div class="features segments">
+		<div class="container">
+			<div class="row">
+				<div class="col s6">
+					<div class="contents z-depth-1"><a href="{% url 'prospects_register' %}">
+						<i class="material-icons">people</i></a>
+						<h4><a href="{% url 'prospects_register' %}">Prospectos</a></h4>
+						<p>Registre los datos de sus prospectos</p>
+					</div>
+				</div>
+				<!-- 
+				<div class="col s6">
+					<div class="contents z-depth-1">
+						<i class="material-icons">file_download</i>
+						<h4>Respalde</h4>
+						<p>Descargue su información</p>
+					</div>
+				</div>
+				-->
+			</div>
+			</div>
+		</div>
+	</div>
+	<!-- end features -->
+
+	<!-- gallery work -->
+	<div class="gallery-work segments">
+		<div class="container">
+			<div class="section-title">
+				<h3>Anuncios</h3>
+			</div>
+			<div class="row">
+				<div class="col s6">
+					<div class="contents z-depth-1">
+						<img src="{% static 'images/futuro.jpg' %}" alt="Universidad Azteca de Guadalajara">
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="contents z-depth-1">
+						<img src="{% static 'images/no-te-quedes-fuera.jpg' %}" alt="Universidad Azteca de Guadalajara">
+					</div>
+				</div>
+			</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- end gallery work -->
+
+	<!-- counter -->
+	<div class="counter segments z-depth-1">
+		<div class="container">
+			<div class="row">
+				<div class="col s4">
+					<div class="contents">
+						<h3 class="numscroller" data-min="1" data-max="102" data-delay="0" data-increment="2">102</h3>
+						<h4>Inscritos</h4>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="contents">
+						<h3 class="numscroller" data-min="1" data-max="219" data-delay="0" data-increment="2">18</h3>
+						<h4>Planteles</h4>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="contents">
+						<h3 class="numscroller" data-min="1" data-max="230" data-delay="0" data-increment="2">6</h3>
+						<h4>Ofertas Educativas</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end counter -->
+	
+
+	<!-- end latest blog -->
+	{% endblock %}
+
+	{% block footer %}	
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<ul>
+				<li><a href=""><i class="z-depth-1 fa fa-facebook"></i></a></li>
+				<li><a href=""><i class="z-depth-1 fa fa-twitter"></i></a></li>
+				<li><a href=""><i class="z-depth-1 fa fa-google"></i></a></li>
+				<li><a href=""><i class="z-depth-1 fa fa-instagram"></i></a></li>
+				<li><a href=""><i class="z-depth-1 fa fa-whatsapp"></i></a></li>
+			</ul>
+			<p>Copyright © All Right Reserved</p>
+		</div>
+	</footer>
+	<!-- end footer -->
+	{% endblock %}
+
+	{% block scripts %}
+	<script src="{% static 'js/numscroller.js' %}"></script>
+	<script src="{% static 'js/lightbox.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	{% endblock %}
+
+</body>
+</html>

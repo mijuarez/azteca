@@ -1,0 +1,153 @@
+{% extends 'prospects/base.html' %}
+{% load static %}
+
+
+	{% block head %}
+	{% endblock %}
+
+	{% block content %}
+	<!-- sign up -->
+	<div class="sign-up segments-page">
+		<div class="container">
+		<div class="signup-contents z-depth-1">
+			<div class="pages-title">
+				<h3>Pase Educativo Digital</h3>
+				<div class="line"></div>
+			</div>
+			<form method="POST" class="prospects-form">{% csrf_token %}
+
+				<div class="input-field">
+					<input type="text" name="{{form.name_student.name}}">
+					<label>Nombre(s)</label>
+				</div>
+				<div class="input-field">
+					<input type="text" name="{{form.lastname_student.name}}">
+					<label>Apellido Paterno</label>
+				</div>
+				<div class="input-field" name="{{form.mother_lastname_student.name}}">
+					<input type="text">
+					<label>Apellido Materno</label>
+				</div>
+				<div class="input-field" name="{{form.gender.name}}">
+					<select>
+						<option value="" disabled selected>Elija una opción</option>
+					    <option value="Hombre">Hombre</option>
+					    <option value="Mujer">Mujer</option>
+					</select>
+					<label>Sexo</label>
+				</div>
+				<div class="input-field" name="{{form.birthplace_choices.name}}">
+					<select>
+						<option value="" disabled selected>Elija una opción</option>
+					    <option value="Jalisco">Jalisco</option>
+					    <option value="Nayarit">Nayarit</option>
+					    <option value="Colima">Colima</option>
+					</select>
+					<label>Lugar de Nacimiento</label>
+				</div>
+				<div class="input-field" name="{{form.birthdate.name}}">
+					<input id="fecha" type="text" class="datepicker">
+					<label for="fecha">Fecha de Nacimiento</label>
+				</div>
+				<div class="input-field" name="{{form.educational_options.name}}">
+					<select>
+						<option value="" disabled selected>Elija una opción</option>
+						<option value="Oferta 1">Oferta 1</option>
+						<option value="Oferta 2">Oferta 2</option>
+						<option value="Oferta 3">Oferta 3</option>
+					</select>
+					<label>Oferta Educativa</label>
+				</div>
+				<div class="input-field" name="{{form.campus.name}}">
+					<select>
+						<option value="" disabled selected>Elija una opción</option>
+						<option value="Plantel 1">Plantel 1</option>
+						<option value="Plantel 2">Plantel 2</option>
+						<option value="Plantel 3">Plantel 3</option>
+					</select>
+					<label>Plantel</label>
+				</div>
+				<div class="input-field" name="{{form.time.name}}">
+					<input type="text" class="timepicker">
+					<label>Horario</label>
+				</div>
+				<div class="input-field" name="{{form.date.name}}">
+					<input type="text" class="datepicker">
+					<label>Fecha de Inicio</label>
+				</div>
+				<div class="input-field" name="{{form.movil.name}}">
+					<input type="text">
+					<label>Teléfono Móvil</label>
+				</div>
+				<div class="input-field" name="{{form.email.name}}">
+					<input type="email" class="validate">
+					<label>Email</label>
+				</div>
+				<div class="input-field" name="{{form.sponsor.name}}">
+					<input type="text">
+					<label>Promotor</label>
+				</div>
+				<div class="switch">
+					<label>
+						Convenio
+						<input type="checkbox" name="{{form.agreement.name}}">
+						<span class="lever"></span>
+					</label>
+				</div>
+				<div class="input-field" name="{{form.company.name}}">
+					<input type="text">
+					<label>Empresa</label>
+				</div>
+				<div class="switch">
+					<label>
+						Inscripción
+						<input type="checkbox" name="{{form.enrollment.name}}">
+						<span class="lever"></span>
+					</label>
+				</div>
+				<div class="input-field" name="{{form.payment_enrollment.name}}">
+					<input type="text">
+					<label>Monto de Inscripción</label>
+				</div>
+				<div class="input-field" name="{{form.payment_period.name}}">
+					<select>
+						<option value="" disabled selected>Elija una opción</option>
+						<option value="1">Semanal</option>
+						<option value="2">Mensual</option>
+					</select>
+					<label>Colegiatura</label>
+				</div>
+
+				<label>Colegiatura</label>
+				<div class="input-field" name="{{form.payment_period_amount.name}}">
+					<input type="text">
+					<label>Monto de Colegiatura</label>
+				</div>
+                <div class="card-header header-elements-inline">
+                    <h6 class="card-title"><i class="icon-quill2"></i>FIRMA*</h6>
+                    <div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" id="eraser"><i class="icon-eraser"></i>Limpiar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <canvas id="signature-pad" class="signature-pad" width="340" height="200"></canvas>
+                </div>
+				 <button class="button z-depth-1" type="submit" class="save btn btn-default"><i class="fa fa-send"></i>Enviar</button>
+			</form>
+		</div>
+		</div>
+	</div>
+	<!-- end sign up -->
+	{% endblock %}
+
+
+	<!-- end footer -->
+
+	{% block scripts %}
+		<script src="{% static 'js/register.js' %}"></script>
+	{% endblock %}
+
+</body>
+</html>

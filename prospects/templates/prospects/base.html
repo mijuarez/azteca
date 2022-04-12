@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es_mx">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="{% static 'images/favicon.png' %}">
+	<title>Prospecta - Universidad Azteca de Guadalajara</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+	<link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	{% block head %}
+	{% endblock %}
+</head>
+
+<body>
+
+	<!-- navbar -->
+	<div class="navbar">
+		<div class="container">
+			<div class="row">
+				<div class="col s3">
+					<div class="content-left">
+						<a href="#slide-out" data-activates="slide-out" class="sidebar"><i class="material-icons">menu</i></a>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="content-center">
+						<a href="/"><h1><span></span>Universidad Azteca</h1></a>
+					</div>
+				</div>
+				<div class="col s3">
+					<div class="content-right">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end navbar -->
+	
+	<!-- sidebar -->
+	<div class="sidebar-panel">
+		<ul id="slide-out" class="collapsible side-nav">
+			<li>
+				<div class="user-view">
+					<div class="background">
+						<img src="{% static 'images/bg-user.png' %}" alt="">
+					</div>
+					<img class="circle responsive-img" src="{% static 'images/profile.png' %}" alt="">
+					<span class="white-text name">Usuario Azteca</span>
+				</div>
+			</li>
+			<li><a href="/"><i class="fa fa-home"></i>Inicio</a></li>
+			<!--<li><a href="contact.html"><i class="fa fa-envelope-o"></i>Contact Us</a></li>-->
+			<li><a href="{% url 'prospects_register' %}"><i class="fa fa-sign-in"></i>Registro</a></li>
+
+			<!--<li><a href="contact.html"><i class="fa fa-envelope-o"></i>Contact Us</a></li>-->
+			<li><a href="/prospects_list"><i class="fa fa-users"></i>Prospectos</a></li>
+
+			<!--<li><a href="#"><i class="fa fa-user-plus"></i>Prospectos</a></li>-->
+
+			<li><a href="/prospects_sign_in"><i class="fa fa-share"></i>Salir</a></li>
+		</ul>
+	</div>
+	<!-- end sidebar -->
+
+	{% block slide %}
+	{% endblock %}
+
+	{% block content %}
+	{% endblock %}
+
+	{% block footer %}
+	{% endblock %}
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/materialize.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	{% block scripts %}
+	{% endblock %}
+
+</body>
+</html>
+
